@@ -2,9 +2,18 @@ package by.grodno.lskrashchuk.officegoods;
 
 public class Pen extends OfficeGoods{
 
-	public Pen(int price) {
-		super(price);
-		// TODO Auto-generated constructor stub
+	private String color;
+	private static int totalCount;
+	public Pen(String name, int price, String color) {
+		super(name, price);
+		this.color = color;
+		totalCount++;
+	}
+
+	@Override
+	public int goodsCount() {
+		// TODO Auto-generated method stub
+		return totalCount;
 	}
 
 }

@@ -9,10 +9,10 @@ public class Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<OfficeGoods> goods1 = new ArrayList<OfficeGoods>();
-		goods1.add((OfficeGoods)new Pen(1000));
-		goods1.add((OfficeGoods)new Pen(3000));
-		goods1.add((OfficeGoods)new Pen(100));
-		goods1.add((OfficeGoods)new Notebook(500, 12));
+		goods1.add((OfficeGoods)new Pen("Ручка шариковая",1000, "синий"));
+		goods1.add((OfficeGoods)new Pen("Ручка перьевая", 3000, "черный"));
+		goods1.add((OfficeGoods)new Pen("Ручка Паркер", 100, "синий"));
+		goods1.add((OfficeGoods)new Notebook("Тетрадь на спирали в мягком переплете",500, 12));
 		
 		Collections.sort(goods1);
 		

@@ -1,7 +1,16 @@
 package by.grodno.lskrashchuk.officegoods;
 
-public class OfficeGoods implements Comparable {
+public abstract class OfficeGoods implements Comparable {
+	private String name;
 	private int price;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public int getPrice() {
 		return price;
@@ -11,14 +20,17 @@ public class OfficeGoods implements Comparable {
 		this.price = price;
 	}
 
-	public OfficeGoods(int price) {
+	public abstract int goodsCount();
+	
+	public OfficeGoods(String name, int price) {
 		super();
+		this.name = name;
 		this.price = price;
 	}
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub\
 		OfficeGoods entry = (OfficeGoods) o;
 		int result = price - entry.price;
 		if (result !=0){
