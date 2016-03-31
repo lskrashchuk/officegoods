@@ -14,7 +14,10 @@ public class Application {
 		goods1.add((OfficeGoods)new Pen("Ручка Паркер", 100, "синий"));
 		goods1.add((OfficeGoods)new Notebook("Тетрадь на спирали в мягком переплете",500, 12));
 		
-		Collections.sort(goods1);
+		//Collections.sort(goods1);
+		//Collections.sort(goods1, new SortByName());
+		Collections.sort(goods1, new SortByPriceName());
+		
 		
 		
 		Employee emp = new Employee("Вася", "Начальник", (ArrayList<OfficeGoods>) goods1);
@@ -24,7 +27,7 @@ public class Application {
 	
 	public static void printGoods(ArrayList<OfficeGoods> g){
 		for (OfficeGoods goods : g){
-			System.out.println(goods.getPrice());
+			System.out.println(goods);
 		}
 	}
 

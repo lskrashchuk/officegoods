@@ -39,6 +39,8 @@ public abstract class OfficeGoods implements Comparable {
 		return 0;
 	}
 	
-	
+	public String toString() {
+		return String.format("Наименование: %s, цена: %s", this.getName(), this.getPrice());
+	}
 
 }
