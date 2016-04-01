@@ -1,19 +1,14 @@
 package by.grodno.lskrashchuk.officegoods;
 
-public class Pen extends OfficeGoods{
+import java.math.BigDecimal;
 
+public class Pen extends OfficeGood{
 	private String color;
-	private static int totalCount;
-	public Pen(String name, int price, String color) {
-		super(name, price);
+
+	public Pen(String name, BigDecimal price, int count, String color) {
+		super(name, price, count);
 		this.color = color;
-		totalCount++;
 	}
 
-	@Override
-	public int goodsCount() {
-		// TODO Auto-generated method stub
-		return totalCount;
-	}
 
 }
