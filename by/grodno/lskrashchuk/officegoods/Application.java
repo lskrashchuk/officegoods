@@ -11,10 +11,10 @@ public class Application {
 		//Junior Kit
 		OfficeKit JuniorKit = new OfficeKit();
 		List<OfficeGood> goods = new ArrayList<OfficeGood>();
-		goods.add(new Pen("Ручка шариковая",new BigDecimal("5000"), 1, "синий"));
-		goods.add(new Pen("Ручка перьевая", new BigDecimal("5000"), 1, "черный"));
-		goods.add(new Pen("Ручка гелевая", new BigDecimal("1000"), 1, "синий"));
-		goods.add(new Copybook("Тетрадь на спирали в мягком переплете", new BigDecimal("3500"), 5, 12));
+		goods.add(new Pen("Gel pen",new BigDecimal("5000"), 1, "blue"));
+		goods.add(new Pen("Ballpen", new BigDecimal("5000"), 1, "black"));
+		goods.add(new Pen("Fountain pen", new BigDecimal("1000"), 1, "blue"));
+		goods.add(new Copybook("Thin copybook", new BigDecimal("3500"), 5, 12));
 		JuniorKit.setKit((ArrayList<OfficeGood>) goods);
 		
 		System.out.println("Sort by price");
@@ -33,12 +33,12 @@ public class Application {
 		OfficeKit clone = JuniorKit.clone();
 		
 	
-		Employee emp = new Employee("Иванов И.И.", "Начальник", clone.getKit());
+		Employee emp = new Employee("Ivanov I.I.", "Boss", clone.getKit());
 		//Increase count of pens for this employee
 		emp.getOfficeGoods().get(0).setCount(3);
         System.out.println(emp);
         printGoods(emp.getOfficeGoods());
-        System.out.println("Полная стоимость:"+emp.totalSummGoogs());
+        System.out.println("Total summ:"+emp.totalSummGoogs());
         
         //Check set of Junior Kit
         printGoods(JuniorKit.getKit());
